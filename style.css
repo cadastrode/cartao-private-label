@@ -1,0 +1,62 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2? family= Acme & family= Chicle & family= Passion+One & family= Uchen & display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+
+ 
+ font-family: 'Acme', sans-serif;
+ font-family: 'Chicle', cursive;
+ font-family: 'Passion One', cursive;
+ font-family: 'Uchen', serif;
+
+
+    color: #023059;
+    color: #035AA6;
+    color: #2682A6;
+    color: #7BBF4B;
+    color: #F2B705;
+}
+header{
+    background-image: linear-gradient(to right,#023059,#024580,#023059);
+    padding:10px;
+}
+#cab{
+    display: flex;
+    align-items: center;
+    
+}
+#cab img{
+    width: 8%;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+#ca{
+    padding:10px;
+}
+#ca p{
+    display: flex; 
+    color: aliceblue; 
+    
+}
+#ca h1{
+    font-size: 3em; 
+    color: aliceblue;
+      
+}
+nav a{
+text-decoration: none;
+
+color: aliceblue;
+
+font-size:1.2em;
+padding:15px;
+}
+#na{
+    width: 150px;
+    height: 50px;
+    background-color: #F2B705;
+    color: #ffffff;
+    margin-left: 300px;
+    border-radius: 30px;
+}
