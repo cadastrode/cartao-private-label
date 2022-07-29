@@ -10,12 +10,13 @@
  font-family: 'Passion One', cursive;
  font-family: 'Uchen', serif;
 
-    color: aliceblue;
+    
     color: #023059;
     color: #035AA6;
     color: #2682A6;
     color: #7BBF4B;
     color: #F2B705;
+    color: aliceblue;
 }
 header{
     background-image: linear-gradient(to bottom ,#023059,#024580,#023059);
@@ -28,19 +29,19 @@ header{
     
 }
 #cab img{
-    width: 8%;
+    width: 4%;
     margin-left: 35px;
     margin-top: 10px;
 }
 #car{
-    margin-left: 170px;
-    background-color:#023059 ;
-    color:#F2B705;
+    margin-left: 50px;
+    background-color:#F2E205;
+    color:#023059;
     text-decoration: none;
-    font-size: 1.3em;
-    text-shadow: 1px 1px 1px black;
+    font-size: 1.2em;
+    font-weight: bold;
     box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.315);
-    padding: 15px;
+    padding: 10px;
     border-radius: 30px;
 }
 #ca{
@@ -57,7 +58,7 @@ header{
       
 }
 nav{
-    margin-left: 100px;
+    margin-left: 50px;
 }
 nav a{
   text-decoration: none;
@@ -71,5 +72,44 @@ nav a{
     background-color: #F2B705;
     color: #ffffff;
     margin-left: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.445);
     border-radius: 30px;
+}
+#sla{
+    display: flex;
+    background-color: #035AA6;
+    position: relative;
+    padding: 15px;
+}
+#slider{
+    width: 55%;
+    height: 430px; 
+    
+}
+#slider img{
+    opacity: 0;
+    position: absolute;
+    width: 55%;
+    height: 430px;
+    object-fit: cover;
+    margin-left: 22%;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.418);  
+    border-radius: 10px;
+    transition: opacity 1000ms;
+}
+#slider img.select{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+footer{
+    background-image: linear-gradient(to bottom ,#023059,#024580,#023059);
+    padding:10px;
+    box-shadow:2px 3px 2px rgba(0, 0, 0, 0.473);
+    text-align: center;
 }
