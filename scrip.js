@@ -1,54 +1,53 @@
-let time=10000,
-currientImageIndex= 0,
-images = document.querySelectorAll("#slider img")
-max=images.length;
+var imgs=[];
+var slid;
+var imgAtual;
+var maxImg;
+var tmp;
 
 
-
-function proximaImagem(){
+function precarregamento(){
+    var s=1;
+    for(var i=0;i<11;i++){
+    imgs[i]=new Image();
+    imgs[i].src="img/s"+s+".jpg";
+    s++;
     
-    images[currientImageIndex].classList.remove("select")
-
-    currientImageIndex++
-
+    }
    
+}
+function carregar(img){
+    slid.style.backgroundImage="url('"+imgs[img].src+"')"
+    
+}
+
+ function troca(dir){
+    
+    imgAtual+=dir;
+    if(imgAtual>maxImg){
+        imgAtual=0;   
+    }else if(imgAtual<0){
+        imgAtual=maxImg;   
+    }
+    carregar(imgAtual);
+    }
    
-    if(currientImageIndex>=max){
-    currientImageIndex=0;
-}
-images[currientImageIndex].classList.add("select")
-}
-function mudaCor(){
-    if(currientImageIndex==0){
-        var cor=document.getElementById("sla").style.backgroundColor="#002A54"
-    }else if(currientImageIndex==1){
-        var cor=document.getElementById("sla").style.backgroundColor="#fff"
-    }else if(currientImageIndex==2){
-        var cor=document.getElementById("sla").style.backgroundColor="#C5D932"
-    }else if(currientImageIndex==3){
-        var cor=document.getElementById("sla").style.backgroundColor="#2C74A6"
-    }else if(currientImageIndex==4){
-        var cor=document.getElementById("sla").style.backgroundColor="#F2B90F"
-    }else if(currientImageIndex==5){
-        var cor=document.getElementById("sla").style.backgroundColor="#fff"
-    }else if(currientImageIndex==6){
-        var cor=document.getElementById("sla").style.backgroundColor="#498E33"
-    }else if(currientImageIndex==7){
-        var cor=document.getElementById("sla").style.backgroundColor="#0F85B5"
-    }else if(currientImageIndex==8){
-        var cor=document.getElementById("sla").style.backgroundColor="#C0D72F"
-    }else if(currientImageIndex==9){
-        var cor=document.getElementById("sla").style.backgroundColor="#00265D"
-    }else if(currientImageIndex==10){
-        var cor=document.getElementById("sla").style.backgroundColor="#D5DE37"
+    function inicia(){
+        precarregamento();
+        imgAtual=0;
+        maxImg=imgs.length-1;
+        slid=document.getElementById("dvslider");
+        carregar(imgAtual);
+       tmp=0;
+       anima();
+    
+    }
+    function anima(){
+       tmp++
+       if(tmp>=400){
+        tmp=0;
+        troca(1);
+       }
+       window.requestAnimationFrame(anima)
     }
     
-}
-
-function iniciar(){
-   setInterval(() => {
-    proximaImagem()
-    mudaCor()
-   }, time);
-}
-window.addEventListener("load",iniciar)
+    window.addEventListener("load",inicia);

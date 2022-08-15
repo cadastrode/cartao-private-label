@@ -20,14 +20,19 @@ font-family: 'Acme', sans-serif;
     color: aliceblue;
     
 }
-body{
- 
-}
+
 header{
+    width: 100%;
+    
+    background-size: cover;
+    position: fixed;
+    z-index: 10;
     display: flex;
     background-image: linear-gradient(to bottom ,#023059,#024580,#023059);
     padding:10px;
     box-shadow:2px 3px 2px rgba(0, 0, 0, 0.473);
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 .hed{
    background-image: linear-gradient(to bottom, #023868,#024580);
@@ -48,7 +53,6 @@ header{
 }
 #car{
     display: flex;
-    margin-left: 200px;
     background-color:#F2E205;
     color:#023059;
     text-decoration: none;
@@ -57,6 +61,16 @@ header{
     box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.315);
     padding: 8px;
     border-radius: 30px;
+}
+#car:hover{
+    background-color:#f3e960;
+    color:#01192e;
+    padding: 10px;
+}
+#cada:hover{
+    background-color:#0460b1;
+    color:#C5D932;
+    padding: 12px;
 }
 #ca{
     padding:8px;
@@ -91,32 +105,28 @@ nav a{
     border: 1px solid rgba(0, 0, 0, 0.445);
     border-radius: 30px;
 }
-#sla{
-    display: flex;
-    background-color: #035AA6;
-    position: relative;
-  
-    border-bottom: 1px solid #02305963;
-}
-#slider{
-    display: flex;
-    width: 45%;
-    height: 370px;  
-    margin-bottom: 25px; 
-}
-#slider img{
-    display: flex;
-    opacity: 0;
+main{
+    
     position: absolute;
-    width: 100%;
-    object-fit: cover;
-    transition: opacity 1000ms;
-    padding: 0px;
-    margin: 0px;
+    top:92px;
+    width: 100%;   
 }
-#slider img.select{
-    opacity: 1;
+#dvslider{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 67vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
 }
+#dvslider img{
+    display: flex;
+    
+}
+
 #icon{
     display: flex;
     width: 99%;
@@ -180,21 +190,38 @@ nav a{
     color: #023059;
    
 }
+strong{
+    color: #023059;
+}
 .t1 img{
     padding: 15px;
 }
 .t2 img{
     padding: 15px;
 }
-.tex{
+#tex{
+    display: flex;
     background-color: #023059;
     box-shadow: 3px 5px 3px #01213d6b;
-    font-size: 2em;
-    color:#F2E205;
+    font-size: 1.6em;
     text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.233);
     text-align: center;
-    padding: 5px;
+    justify-content: center;
+  
 }
+.ind{
+    display: flex;
+    background-color:#b6f1f533;
+    width: 25%;
+    height: 20px;
+    margin: 10px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+   
+    
+}
+
+
 
 #mod{
     background-color:#01213d;
@@ -219,30 +246,30 @@ nav a{
     margin-top: 30px;
     margin-bottom: 15px;
     padding: 10px;
-    width: 75%;
-   background-color:#3f9cee67;
-   border-radius: 200px;
-    box-shadow: 2px 3px 2px rgba(173, 219, 6, 0.582);
+    width: 80%;
+   background-color:#488F31;
+   border-radius: 100px;
+    box-shadow: 2px 3px 2px rgba(0, 37, 58, 0.582);
 }
 #ma img{
     margin-top: 30px;
     margin-bottom: 15px;
     padding: 25px;
     width: 65%;
-    border-radius: 200px;
+    border-radius: 100px;
     box-shadow: 2px 3px 2px rgba(173, 219, 6, 0.582);
 }
 #video{
     display: flex;
     padding: 10px;
     width: 98%;
-    justify-content: center;
+    justify-content: space-between
     
 }
 .vid{
     display: flex;
     padding: 10px;
-    width: 43%;
+    width: 49%;
     align-items: center;
     
 }
@@ -264,16 +291,16 @@ h2{
     text-align: center;
 }
 #cada{
-    font-family: 'Acme', sans-serif;
-   margin-left: 32%;
+   font-family: 'Acme', sans-serif;
+   
    text-decoration: none;
-   font-size: 2em;
-   color: #F2B705;
+   font-size: 1.2em;
+   color:#ffffff;
    font-weight: bold;
-   background-image: linear-gradient(to bottom ,#023059,#024580,#023059);
+   background-image: linear-gradient(to bottom ,#055194,#0460b1,#055194);
     text-shadow: 1px 2px 1px black;
     border-radius: 10px;
-    padding: 15px;
+    padding: 8px;
     box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.342);
 }
 form{
@@ -293,9 +320,9 @@ input{
     width: 50%;
     padding: 10px;
     margin-left: 23%;
-    font-size: 1.3em;
+    font-size: 1em;
     border-radius: 10px;
-    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.315);
+   
 }
 label p{
     font-family: 'Acme', sans-serif;
@@ -324,7 +351,7 @@ textarea{
     margin-left: 23%;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 1.3em;
+    font-size: 1em;
     border-radius: 10px;
     box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.315);
 }
@@ -336,19 +363,12 @@ textarea{
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.418);
     margin-left: 36%;
     width: 30%;
-}
-#to{
-    display: flex;
-    background-image: url("img/Vagas.png");
-    width: 100%;
-    height: 350px;
-    flex-direction: row-reverse;
+    padding-left: 4px;
     
-   
 }
 #to img{
-    margin-left: 10%;
-    width: 25%;
+
+    width: 100%;
     align-items: flex-start;
     justify-content: flex-start
     
@@ -379,14 +399,11 @@ textarea{
     text-shadow: 1px 2px 1px #01213d8a;
 }
 
-
-
-
-
-
-
-
 footer{
+    position:absolute;
+    bottom: -1630px;
+   
+    width: 98%;
     background-image: linear-gradient(to bottom ,#023059,#024580,#023059);
     padding:10px;
     box-shadow:2px 3px 2px rgba(0, 0, 0, 0.473);
@@ -398,3 +415,301 @@ footer p{
 footer h2{
     color: #ffffff;
 }
+.foo{
+    position:absolute;
+bottom: -950px;
+}
+iframe{
+    width: 99%;
+    height: 400px;
+    margin-left: 7px;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.315);
+}
+
+.whats img{
+position: fixed;
+bottom: 5px;
+right: 5px;
+width: 6%;
+}
+.whats:hover img{
+    width: 7%; 
+}
+.bt{
+    background-color: #01213d3f;
+    width: 3%;
+    height: 50px;
+    cursor: pointer;
+    outline: none;
+    margin: 5px;
+    border: none;
+   
+}
+.bt h1{
+    color:#ffffffb4;
+    font-size: 3.5em;
+    text-shadow: none;
+}
+ul{
+    margin: 3px;
+    padding: 2px;
+    list-style-type: none;
+}
+.menu{
+    display: none;
+    font-size: 1.3em;
+    
+}
+ul:hover .menu{
+    display: block;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+    margin-left: 1px;
+}
+#men{
+    text-decoration: underline;
+    float: left;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    text-shadow:1px 2px #3c3f4262;
+    padding: 5px;
+    
+}
+.menu:hover{
+    color:#ffda06;
+    text-shadow: 4px 2px 4px rgb(0 0 0);
+    padding: 8px;
+    font-size: 1.2em;
+   
+}
+#men:hover{
+    display: block;
+    color:#ffda06;
+    text-shadow: 4px 2px 4px rgb(0 0 0);
+    padding: 8px;
+    font-size: 1.2em;
+    
+}
+li:hover a{
+    text-decoration: underline;
+    display: block;
+    color:#ffda06;
+    text-shadow: 4px 2px 4px rgb(0 0 0);
+    padding: 8px;
+    font-size: 1.2em;
+  
+}
+@media  screen and (max-width: 1790px){
+    #resp{
+        display: none;
+    }
+    #car{
+        position: fixed;
+        top: 25px;
+        right: 135px;
+        width: 12%;
+    }
+    #cada{
+        margin-left: 37%;
+    }
+    
+    
+      }
+@media  screen and (max-width: 1280px){
+    #cada{
+        margin-left: 36%;
+    }
+    #resp{
+        display: none;
+    }
+   header{
+    padding-top: 17px;
+    padding-bottom: 17px;
+   }
+   #dvslider{
+    width: 100vw;
+    height: 58vh; 
+}
+    #cab img {
+        margin-left: -5px;
+        margin-top: 8px;
+      }
+      nav {
+        margin-left: 0px;   
+    }
+    nav a {
+        font-size: 1em;
+        padding: 6px;
+    }
+    #ca p {
+        display: none;
+    }
+    #ca h1 {
+        font-size: 1em;
+    }
+    #car{
+        position: fixed;
+        top: 25px;
+        right: 100px;
+        width: 18%;
+
+    }
+    .vid{  
+        width: 49%;
+    }}
+  @media  screen and (max-width: 1040px){
+    #cada{
+        margin-left: 30%;
+    }
+    header{
+        padding-top: 17px;
+        padding-bottom: 17px;
+       }
+       #car{
+        position: fixed;
+        top: 25px;
+        right: 73px;
+        width: 15%;
+        font-size: .8em;
+
+    }
+    #dvslider{
+        width: 100vw;
+        height: 45vh; 
+    }
+  }
+  @media screen and (max-width: 840px){
+    #cada{
+        margin-left: 27%;
+        font-size: 1em;
+    }
+    #resp{
+        display: block;
+    }
+    #princ{
+        display: none;
+    }
+    header{
+        padding-top: 17px;
+        padding-bottom: 17px;
+       }
+       #dvslider{
+        width: 100vw;
+        height: 35vh; 
+    }
+    #cab img{
+        width: 12%;
+        margin-left: 17%;
+        margin-top: 10px;
+    }
+    #car{
+        position: fixed;
+        top: 25px;
+        right: 10px;
+        width: 25%;
+        font-size: .8em;
+    }
+    #ca h1{
+        font-size: 1.3em;      
+    }
+    .t1 h2{
+        font-size: 1.1em;
+    }
+    .t2 h2{
+        font-size: 1.1em; 
+    }
+    .t1 p{
+        font-size: .8em; 
+    }
+    .t2 p{
+        font-size: .8em;
+    }
+    h1{
+        font-size: 1.1em;
+    }
+    p{
+        font-size: .8em;
+    }
+    .vid {
+        width: 100%;
+        display: block;
+    }
+    #video{
+        width: 100%;
+        display: block;
+    }
+    footer{
+        position:absolute;
+        bottom: -1950px;
+  }
+  footer h2{
+    font-size: 1.3em;
+}}
+  
+  @media  screen and (max-width: 500px){
+    #cada{
+        margin-left: 18%;
+        font-size: .8em;
+    }
+    #resp{
+        display: block;
+    }
+    #princ{
+        display: none;
+    }
+    header{
+        padding-top: 17px;
+        padding-bottom: 17px;
+       }
+       #dvslider{
+        width: 100vw;
+        height: 40vh;
+      
+    }
+    #cab img{
+        width: 9%;
+        margin-left: 17%;
+        margin-top: 10px;
+    }
+    #car{
+        position: fixed;
+        top: 25px;
+        right: 10px;
+        width: 23%;
+        font-size: .7em;
+    }
+    #ca h1{
+        font-size: 1.1em; 
+          
+    }
+    .t1 h2{
+        font-size: 1em;
+    }
+    .t2 h2{
+        font-size: 1em; 
+    }
+    .t1 p{
+        font-size: .7em; 
+    }
+    .t2 p{
+        font-size: .7em;
+    }
+    h1{
+        font-size: 1em;
+    }
+    p{
+        font-size: .7em;
+    }
+    footer{
+        position:absolute;
+        bottom: -1750px;
+  }
+  footer h2{
+    font-size: 1.1em;
+}
+  }
+  
