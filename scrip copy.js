@@ -1,21 +1,21 @@
 var imgs=[];
-var slid;
+var cel;
 var imgAtual;
 var maxImg;
 var tmp;
 
 
 function precarregamento(){
-    var s=1;
+    var r=1;
     for(var i=0;i<11;i++){
     imgs[i]=new Image();
-    imgs[i].src="img/s"+s+".jpg";
-    s++;
+    imgs[i].src="img/r"+r+".jpg";
+    r++;
     }
    
 }
 function carregar(img){
-    slid.style.backgroundImage="url('"+imgs[img].src+"')"
+    cel.style.backgroundImage="url('"+imgs[img].src+"')"
     
 }
 
@@ -34,7 +34,7 @@ function carregar(img){
         precarregamento();
         imgAtual=0;
         maxImg=imgs.length-1;
-        slid=document.getElementById("dvslider");
+        cel=document.getElementById("slider");
         carregar(imgAtual);
        tmp=0;
        anima();
