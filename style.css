@@ -54,6 +54,9 @@ header{
 }
 #car{
     display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
     background-color:#F2E205;
     color:#023059;
     text-decoration: none;
@@ -130,6 +133,7 @@ main{
     width: 100%;   
 }
 #dvslider{
+    margin-top: -13px;
     background-size: contain;
     background-repeat: no-repeat;
     width: 100vw;
@@ -147,16 +151,25 @@ main{
 }
 
 #icon{
-    display: flex;
+    display: none;
     width: 98%;
     margin: 5px;
     margin-top: 20px;
 }
 #icone{
-    display: flex;
+    display: none;
     width: 98%;
     margin: 5px;
     margin-top: 20px;
+}
+#segu{
+    display: flex;
+}
+#seg{
+    display: flex;
+}
+#ico{
+    display: none;
 }
 .t1{
     width: 30%;
@@ -201,8 +214,18 @@ main{
     padding: 13px;  
     color: #ffffff;
 }
+.t3:hover{
+    font-size: 20px;
+    padding: 13px;  
+    color: #ffffff;
+}
 
 .t2 h2{
+    color: #023059;
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.233);
+    
+}
+.t3 h2{
     color: #023059;
     text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.233);
     
@@ -216,6 +239,10 @@ main{
     text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.233);
     
 }
+.t3 p{
+    color: #023059;
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.233); 
+}
 .t1 p{
     color: #023059;
    
@@ -227,6 +254,9 @@ strong{
     padding: 15px;
 }
 .t2 img{
+    padding: 15px;
+}
+.t3 img{
     padding: 15px;
 }
 #tex{
@@ -258,7 +288,7 @@ strong{
     display: flex;
     width: 98%;
     padding: 0px;
-    justify-content: flex-start;
+    justify-content: space-around;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
@@ -268,9 +298,9 @@ strong{
 .moda{
     width: 40%;
     padding: 10px;
-   
-    text-align: center;
-    
+   text-align: center;
+   padding-left: 2px;
+   padding-right: 2px;
 }
 #marca img{
     margin-top: 30px;
@@ -285,7 +315,7 @@ strong{
     margin-top: 30px;
     margin-bottom: 15px;
     padding: 25px;
-    width: 100%;
+    width: 93%;
     border-radius: 100px;
     box-shadow: 2px 3px 2px rgba(173, 219, 6, 0.582);
 }
@@ -293,7 +323,9 @@ strong{
     display: flex;
     padding: 10px;
     width: 98%;
-    justify-content: space-between
+    justify-content: space-between;
+    padding-left: 0px;
+    padding-right: 0px;
     
 }
 .vid{
@@ -301,7 +333,8 @@ strong{
     padding: 10px;
     width: 49%;
     align-items: center;
-    
+    padding-left: 0px;
+    padding-right: 0px;
 }
 p{
     color: #C5D932;
@@ -320,23 +353,11 @@ h2{
     border-radius: 2px;
     text-align: center;
 }
-#cada{
-   font-family: 'Acme', sans-serif;
-   
-   text-decoration: none;
-   font-size: 1.2em;
-   color:#ffffff;
-   font-weight: bold;
-   background-image: linear-gradient(to bottom ,#055194,#0460b1,#055194);
-    text-shadow: 1px 2px 1px black;
-    border-radius: 10px;
-    padding: 8px;
-    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.342);
-}
+
 form{
     width: 60%;
     margin-left: 18%;
-    margin-top: 25px;
+    margin-top: 10px;
     margin-bottom: 25px;
     background-image: linear-gradient(to right ,#01213d,#024580,#024580,#012341);
     border-radius: 10px;
@@ -389,21 +410,31 @@ textarea{
     margin-top: 30px;
     font-family: 'Acme', sans-serif;
     font-weight: bold;
-    background-color: #F2B705;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.418);
-    margin-left: 36%;
-    width: 30%;
+    background-color: #F2E205;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.301);
+    
     padding-left: 4px;
-    
+    margin-left: 30%;
+    width: 40%;
 }
-#to img{
+.buta{
+    display: block;
+    margin-left: 30%;
+    width: 40%;
+   
+    font-family: 'Passion One', cursive;
+    font-weight: bold;
+    background-color: #F2E205;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.295);
+    padding-left: 4px;
+}
+a{
+    text-decoration: none;
+}
 
+#to img{
+    margin-top: -13px;
     width: 100%;
-    align-items: flex-start;
-    justify-content: flex-start
-    
-    
-    
 }
 #let{
     margin-left: 10%;
@@ -472,9 +503,9 @@ width: 6%;
     cursor: pointer;
     outline: none;
     margin: 5px;
-    border: none;
-   
+    border: none;  
 }
+
 .bt h1{
     color:#ffffffb4;
     font-size: 3.5em;
@@ -502,8 +533,8 @@ li a{
 #men{
     text-decoration: underline;
     float: left;
-    color:#F2B705;
-    font-size: 1.2em;
+    color:rgba(255, 255, 255, 0.884);
+    text-decoration: none;
     text-align: center;
     text-shadow:1px 2px #3c3f4262;
     padding: 5px;
@@ -556,6 +587,15 @@ li:hover a{
     #car:hover{
       padding: 10px;
     }
+    #icone{
+        display: none;
+    }
+    #icon{
+        display: none;
+    }
+    #ico{
+        display: none;
+    }
     #cada:hover{
         padding: 12px;
     }
@@ -597,6 +637,15 @@ li:hover a{
     #dvslider {
         height: 35vh;   
     }
+    #icone{
+        display: none;
+    }
+    #icon{
+        display: none;
+    }
+    #ico{
+        display: none;
+    }
     #car{
         display: none;
     }
@@ -636,7 +685,7 @@ li:hover a{
    menu{
     display: none;
     width: 50%;
-    background-color: #02427aa2;
+    background-color: #02335ea2;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.514);
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.486);
     border-radius: 10px;
@@ -644,17 +693,16 @@ li:hover a{
 #men{
     display: block;
     background-color:#00000031;
-    font-size: 3em;
+    font-size: 2.5em;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.486);
     border: 2px solid rgba(27, 27, 27, 0.685);
     border-radius: 5px;
     margin: 0px;
     padding: 0px;
-    
     cursor: pointer;
 }
 #men:hover{
-    font-size: 3.1em;
+    font-size: 2.6em;
 }
 
 li a:hover{
@@ -664,7 +712,32 @@ li a:hover{
     width: 14%;
     margin-top: 0px;
     margin-bottom: 0px;
-    margin-left: 60px;
+    margin-left: 30px;
+}
+.buta{
+    display: block;
+    margin-left: 24%;
+    width: 60%;
+   
+    font-family: 'Passion One', cursive;
+    font-weight: bold;
+    background-color: #F2E205;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.253);
+    padding-left: 4px;
+}
+a{
+    text-decoration: none;
+}
+input {
+    width: 86%;
+    margin-left: 0px;
+}
+
+#seg{
+    display: none;
+}
+#segu{
+    display: none;
 }
 #icon{
     display: flex;
@@ -774,6 +847,14 @@ strong{
 .t3 img{
     padding: 15px;
 }
+#mod{
+ 
+}
+#ma img {
+    padding: 0px;
+    width: 110%;
+    margin-top: 40px;
+}
 .whats img{
     width: 11%; 
 }
@@ -782,7 +863,16 @@ strong{
 }
 footer{
     position:absolute;
-    bottom: -2430px;
+    bottom: -2530px;
+}
+h1{
+    font-size: 1.2em;
+}
+h2{
+    font-size: 1.2em;
+}
+p{
+    font-size: .8em;
 }
   
   }
