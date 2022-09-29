@@ -40,27 +40,32 @@ header{
 .he{
     padding-top: 0px;
 }
+
 #cab{
     display: flex;
     align-items: center;
-    font-size: 1.2em;
+    font-size: 1.4em;
     
 }
 #cab img{
-    width: 5%;
-    margin-left: 35px;
-    margin-top: 10px;
+    width: 6%;
+    margin-top: 8px;
+    margin-bottom: 6px;
 }
 #car{
     display: flex;
     background-color:#F2E205;
     color:#023059;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 70%;
     font-weight: bold;
     box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.315);
-    padding: 8px;
+    padding: 4px;
     border-radius: 30px;
+    position: fixed;
+    top: 28px;
+    right: 4px;
+    width: 13%;
 }
 #car:hover{
     background-color:#f3e960;
@@ -74,17 +79,22 @@ header{
 }
 #ca{
     padding:8px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 #ca p{
+    padding: 0px;
     display: flex; 
     color: aliceblue; 
+    font-size: .8em;
     
 }
-#ca h1{
-    font-size: 2em; 
-    color: aliceblue;
-      
+#cabeca{
+    color: white;
+    font-size: 1.6em;
+    text-shadow: rgba(0, 0, 0, 0.541);
 }
+
 nav{
     display: flex;
     margin-left: 50px;
@@ -92,8 +102,16 @@ nav{
 nav a{
   text-decoration: none;
   color: aliceblue;
-  font-size:1.1em;
+  font-size:1em;
   padding:15px;
+  padding-left: 0px;
+  padding-right: 15px;
+}
+#men{
+    display: none;
+}
+menu{
+    display: none;
 }
 #na{
     display: flex;
@@ -130,17 +148,18 @@ main{
 
 #icon{
     display: flex;
-    width: 99%;
+    width: 98%;
     margin: 5px;
     margin-top: 20px;
 }
 #icone{
     display: flex;
+    width: 98%;
     margin: 5px;
     margin-top: 20px;
 }
 .t1{
-    width: 31%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -150,7 +169,7 @@ main{
     padding: 10px;
     text-align: center;
 }.t2{
-    width: 31%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,7 +180,17 @@ main{
     padding: 10px;
     text-align: center;
 }
-
+.t3{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:1px solid #023059;
+    margin: 2%;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
 .t1:hover{
     font-size: 20px;
     padding: 13px;  
@@ -228,14 +257,14 @@ strong{
     background-color:#01213d;
     display: flex;
     width: 98%;
-    padding: 10px;
-    justify-content: center;
+    padding: 0px;
+    justify-content: flex-start;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-content: center;
-    align-items: baseline;;
-    
+    align-items: baseline;
 }
+
 .moda{
     width: 40%;
     padding: 10px;
@@ -247,7 +276,7 @@ strong{
     margin-top: 30px;
     margin-bottom: 15px;
     padding: 10px;
-    width: 80%;
+    width: 110%;
    background-color:#488F31;
    border-radius: 100px;
     box-shadow: 2px 3px 2px rgba(0, 37, 58, 0.582);
@@ -256,7 +285,7 @@ strong{
     margin-top: 30px;
     margin-bottom: 15px;
     padding: 25px;
-    width: 65%;
+    width: 100%;
     border-radius: 100px;
     box-shadow: 2px 3px 2px rgba(173, 219, 6, 0.582);
 }
@@ -279,13 +308,13 @@ p{
     padding: 10px;
 }
 h1{
-    font-size: 2em;
+    font-size: 1.5em;
     text-shadow: 1px 2px rgba(0, 0, 0, 0.521);
     color:#F2E205;
     border-radius: 2px;
 }
 h2{
-    font-size: 2em;
+    font-size: 1.5em;
     text-shadow: 1px 2px rgba(0, 0, 0, 0.521);
     color:#F2E205;
     border-radius: 2px;
@@ -473,7 +502,7 @@ li a{
 #men{
     text-decoration: underline;
     float: left;
-    color: white;
+    color:#F2B705;
     font-size: 1.2em;
     text-align: center;
     text-shadow:1px 2px #3c3f4262;
@@ -483,7 +512,7 @@ li a{
 .menu:hover{
     color:#ffda06;
     text-shadow: 4px 2px 4px rgb(0 0 0);
-    padding: 8px;
+    padding: 6px;
     font-size: 1.2em;
    
 }
@@ -504,214 +533,257 @@ li:hover a{
     font-size: 1.2em;
   
 }
-@media  screen and (max-width: 1790px){
-   
-    #resp{
-        display: none;
-    }
-    #car{
-        position: fixed;
-        top: 25px;
-        right: 135px;
-        width: 12%;
-    }
-    #cada{
-        margin-left: 37%;
-    }
-    
-    
-      }
-@media  screen and (max-width: 1280px){
-    #cada{
-        margin-left: 36%;
-    }
-    #resp{
-        display: none;
-    }
-   header{
-    padding-top: 17px;
-    padding-bottom: 17px;
-   }
-   #dvslider{
-    width: 100vw;
-    height: 58vh; 
-}
-    #cab img {
-        margin-left: -5px;
-        margin-top: 8px;
-      }
-      nav {
-        margin-left: 0px;   
-    }
-    nav a {
-        font-size: 1em;
-        padding: 6px;
-    }
-    #ca p {
-        display: none;
-    }
-    #ca h1 {
-        font-size: 1em;
-    }
-    #car{
-        position: fixed;
-        top: 25px;
-        right: 100px;
-        width: 18%;
 
+  @media  screen and (max-width: 1000px){
+    header {
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
-    .vid{  
-        width: 49%;
-    }}
-  @media  screen and (max-width: 1040px){
-    #cada{
-        margin-left: 30%;
-    }
-    header{
-        padding-top: 17px;
-        padding-bottom: 17px;
-       }
-       #car{
-        position: fixed;
-        top: 25px;
-        right: 73px;
-        width: 15%;
-        font-size: .8em;
-
-    }
-    #dvslider{
-        width: 100vw;
-        height: 45vh; 
-    }
-  }
-  @media screen and (max-width: 840px){
-    #cada{
-        margin-left: 27%;
-        font-size: 1em;
-    }
-    #resp{
-        display: block;
-    }
-    #princ{
-        display: none;
-    }
-    header{
-        padding-top: 17px;
-        padding-bottom: 17px;
-       }
-       #dvslider{
-        width: 100vw;
-        height: 35vh; 
+    #cab{
+        font-size: 1.1em;
+        
     }
     #cab img{
-        width: 12%;
-        margin-left: 17%;
-        margin-top: 10px;
+        width: 6%;
+        margin-top: 8px;
+        margin-bottom: 6px;
     }
     #car{
-        position: fixed;
-        top: 25px;
-        right: 10px;
-        width: 25%;
+        top: 28px;
+        right: 4px;
+        width: 13%;
+    }
+    #car:hover{
+      padding: 10px;
+    }
+    #cada:hover{
+        padding: 12px;
+    }
+    #ca{
+        padding:8px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #ca p{
         font-size: .8em;
+        
     }
-    #ca h1{
-        font-size: 1.3em;      
+    #cabeca{
+       font-size: 1.4em;
     }
-    .t1 h2{
-        font-size: 1.1em;
+    
+    nav{
+        margin-left: 20px;
     }
-    .t2 h2{
-        font-size: 1.1em; 
+    nav a{
+      font-size:1em;
     }
-    .t1 p{
-        font-size: .8em; 
+    menu{
+        display: none;
     }
-    .t2 p{
-        font-size: .8em;
+    #dvslider {
+        height: 42vh;   
     }
-    h1{
-        font-size: 1.1em;
+
+  }
+  @media screen and (max-width: 770px){
+    header {
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
-    p{
-        font-size: .8em;
+    nav{
+        margin-left: 10px;
+    }
+    #dvslider {
+        height: 35vh;   
+    }
+    #car{
+        display: none;
+    }
+    #video {
+        display: block;
     }
     .vid {
-        width: 100%;
-        display: block;
+        width: 98%;
     }
-    #video{
-        width: 100%;
-        display: block;
+    .whats img{
+        width: 9%; 
     }
-    footer{
-        position:absolute;
-        bottom: -1950px;
-  }
-  footer h2{
-    font-size: 1.3em;
-}}
-  
-  @media  screen and (max-width: 500px){
-    #cada{
-        margin-left: 18%;
-        font-size: .8em;
-    }
-    #resp{
-        display: block;
-    }
-    #princ{
-        display: none;
-    }
-    header{
-        padding-top: 17px;
-        padding-bottom: 17px;
-       }
-       #dvslider{
-        width: 100vw;
-        height: 40vh;
-      
-    }
-    #cab img{
-        width: 9%;
-        margin-left: 17%;
-        margin-top: 10px;
-    }
-    #car{
-        position: fixed;
-        top: 25px;
-        right: 10px;
-        width: 23%;
-        font-size: .7em;
-    }
-    #ca h1{
-        font-size: 1.1em; 
-          
-    }
-    .t1 h2{
-        font-size: 1em;
-    }
-    .t2 h2{
-        font-size: 1em; 
-    }
-    .t1 p{
-        font-size: .7em; 
-    }
-    .t2 p{
-        font-size: .7em;
-    }
-    h1{
-        font-size: 1em;
-    }
-    p{
-        font-size: .7em;
+    .whats:hover img{
+        width: 10%; 
     }
     footer{
         position:absolute;
-        bottom: -1750px;
-  }
-  footer h2{
-    font-size: 1.1em;
+        bottom: -2130px;
 }
+  }
+  
+  @media  screen and (max-width: 655px){
+    header {
+        display: flex;
+        flex-wrap: nowrap;
+        align-content: stretch;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+   nav{
+    display: none;
+   } 
+   span{
+    font-size: 2em;
+   }
+   menu{
+    display: none;
+    width: 50%;
+    background-color: #02427aa2;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.514);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.486);
+    border-radius: 10px;
+}
+#men{
+    display: block;
+    background-color:#00000031;
+    font-size: 3em;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.486);
+    border: 2px solid rgba(27, 27, 27, 0.685);
+    border-radius: 5px;
+    margin: 0px;
+    padding: 0px;
+    
+    cursor: pointer;
+}
+#men:hover{
+    font-size: 3.1em;
+}
+
+li a:hover{
+    font-size: 1em;
+}
+#cab img {
+    width: 14%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 60px;
+}
+#icon{
+    display: flex;
+    width: 98%;
+    margin: 5px;
+    margin-top: 20px;
+}
+#icone{
+    display: flex;
+    width: 98%;
+    margin: 5px;
+    margin-top: 20px;
+}
+#ico{
+    display: flex;
+    width: 98%;
+    margin: 5px;
+    margin-top: 20px;
+}
+.t1{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:1px solid #023059;
+    margin: 2%;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.t3{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:1px solid #023059;
+    margin: 2%;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.t2{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2682a634;
+    margin: 2%;
+    border-radius: 10px;
+    border:1px solid #2682a667;
+    padding: 10px;
+    text-align: center;
+}
+
+.t1:hover{
+    font-size: 20px;
+    padding: 13px;  
+    color: #ffffff;
+}
+.t2:hover{
+    font-size: 20px;
+    padding: 13px;  
+    color: #ffffff;
+}
+.t3:hover{
+    font-size: 20px;
+    padding: 13px;  
+    color: #ffffff;
+}
+
+.t2 h2{
+    color: #023059;
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.233);
+    
+}
+.t2 p{
+    color: #023059;
+   
+}
+.t3 h2{
+    color: #023059;
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.233);
+    
+}
+.t3 p{
+    color: #023059;
+   
+}
+.t1 h2{
+    color: #023059;
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.233);
+    
+}
+.t1 p{
+    color: #023059;
+   
+}
+strong{
+    color: #023059;
+}
+.t1 img{
+    padding: 15px;
+}
+.t2 img{
+    padding: 15px;
+}
+.t3 img{
+    padding: 15px;
+}
+.whats img{
+    width: 11%; 
+}
+.whats:hover img{
+    width: 12%; 
+}
+footer{
+    position:absolute;
+    bottom: -2430px;
+}
+  
   }
   

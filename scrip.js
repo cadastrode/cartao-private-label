@@ -3,7 +3,13 @@ var slid;
 var imgAtual;
 var maxImg;
 var tmp;
-
+function clicMenu(){
+    if(itens.style.display== 'none'){
+        itens.style.display = 'block'
+    } else{
+        itens.style.display= 'none'
+    }
+}
 
 function precarregamento(){
     var s=1;
