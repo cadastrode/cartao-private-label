@@ -126,6 +126,9 @@ menu{
     border: 1px solid rgba(0, 0, 0, 0.445);
     border-radius: 30px;
 }
+.mobile{
+    display: none;
+}
 main{
     
     position: absolute;
@@ -635,7 +638,8 @@ li:hover a{
         margin-left: 10px;
     }
     #dvslider {
-        height: 35vh;   
+        display: none;
+         
     }
     #icone{
         display: none;
@@ -668,6 +672,7 @@ li:hover a{
   }
   
   @media  screen and (max-width: 655px){
+   
     header {
         display: flex;
         flex-wrap: nowrap;
@@ -743,7 +748,7 @@ input {
     display: flex;
     width: 98%;
     margin: 5px;
-    margin-top: 20px;
+    margin-top: -188px;
 }
 #icone{
     display: flex;
