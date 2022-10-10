@@ -465,7 +465,7 @@ a{
 
 footer{
     position:absolute;
-    bottom: -1630px;
+    bottom: -2130px;
    
     width: 98%;
     background-image: linear-gradient(to bottom ,#023059,#024580,#023059);
@@ -481,7 +481,7 @@ footer h2{
 }
 .foo{
     position:absolute;
-bottom: -950px;
+bottom: -1350px;
 }
 iframe{
     width: 99%;
